@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Form - QR Medical System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <a href="/dashboard.html"><img src="/logo1.png" alt="CarBuddy Logo" class="topbar-logo"></a>
+    <div class="prototype-label">PROTOTYPE</div>
+    <div class="topbar-right"></div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="card">
+      <h2 class="text-center mb-1">Medical Profile</h2>
+      <form id="medical-form">
+        
+        <!-- A. Basic -->
+        <h3>A. Basic Information</h3>
+        <div class="form-group">
+          <label>Blood Group</label>
+          <select id="bloodGroup">
+            <option value="">Select...</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Emergency Contact Name</label>
+          <input type="text" id="emergencyName">
+        </div>
+        <div class="form-group">
+          <label>Emergency Phone</label>
+          <input type="text" id="emergencyPhone">
+        </div>
+        <div class="form-group">
+          <label>4-digit Security PIN</label>
+          <input type="password" id="emergencyPin" pattern="[0-9]{4}" maxlength="4" placeholder="e.g. 1234">
+          <small style="color:var(--text-light)">Used to unlock insurance details during emergency.</small>
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+        <!-- B. Conditions -->
+        <h3>B. Medical Conditions</h3>
+        <div class="checkbox-group"><input type="checkbox" id="cond_diabetes"><label>Diabetes</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="cond_asthma"><label>Asthma</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="cond_epilepsy"><label>Epilepsy</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="cond_heartCondition"><label>Heart Condition</label></div>
+        <div class="checkbox-group"><input type="checkbox" id="cond_bp"><label>Blood Pressure</label></div>
+        <div class="form-group">
+          <label>Other Conditions</label>
+          <input type="text" id="cond_other">
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+        <!-- C. Allergies -->
+        <h3>C. Allergies</h3>
+        <div class="form-group">
+          <label>Medicines</label>
+          <input type="text" id="alg_medicines">
+        </div>
+        <div class="form-group">
+          <label>Food</label>
+          <input type="text" id="alg_food">
+        </div>
+        <div class="form-group">
+          <label>Other</label>
+          <input type="text" id="alg_other">
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+        <!-- D. Medications -->
+        <h3>D. Current Medications</h3>
+        <div id="medications-container">
+          <!-- Dynamic inputs go here -->
+        </div>
+        <button type="button" class="btn btn-secondary mt-1 mb-1" id="add-med-btn">+ Add Medication</button>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+        <!-- E. History -->
+        <h3>E. Medical History</h3>
+        <div class="form-group">
+          <label>Surgeries</label>
+          <input type="text" id="hist_surgeries">
+        </div>
+        <div class="form-group">
+          <label>Injuries</label>
+          <input type="text" id="hist_injuries">
+        </div>
+        <div class="form-group">
+          <label>Implants / Pacemakers</label>
+          <input type="text" id="hist_implants">
+        </div>
+
+        <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-color);">
+
+        <!-- F. Special -->
+        <h3>F. Special Notes</h3>
+        <div class="checkbox-group"><input type="checkbox" id="spec_pregnancy"><label>Pregnancy</label></div>
+        <div class="form-group">
+          <label>Disability / Other Notes</label>
+          <input type="text" id="spec_disability">
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-2" id="save-btn">Save Profile</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/medical-form.js"></script>
+</body>
+</html>

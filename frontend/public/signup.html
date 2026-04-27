@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup - QR Medical System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <img src="/logo1.png" alt="CarBuddy Logo" class="topbar-logo">
+    <div class="prototype-label">PROTOTYPE</div>
+    <div class="topbar-right"></div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="card">
+      <h2 class="text-center mb-1">Create Account</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" id="fullName" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number (10 digits)</label>
+          <input type="text" id="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+        <div class="form-group">
+          <label>Policy Number (Zurich Kotak)</label>
+          <input type="text" id="policyNumber" required placeholder="e.g. ZK123456">
+        </div>
+        <div class="form-group">
+          <label>Password (min 6 chars)</label>
+          <input type="password" id="password" minlength="6" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="signup-btn">Verify Policy & Signup</button>
+      </form>
+      <div class="text-center mt-1">
+        <a href="/login.html" style="color: var(--primary-color);">Already have an account? Login</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>

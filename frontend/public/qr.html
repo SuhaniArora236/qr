@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code - QR Medical System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <a href="/dashboard.html"><img src="/logo1.png" alt="CarBuddy Logo" class="topbar-logo"></a>
+    <div class="prototype-label">PROTOTYPE</div>
+    <div class="topbar-right"></div>
+  </div>
+
+  <div class="container mt-2 text-center">
+    <div class="card">
+      <img src="/logo1.png" alt="CarBuddy Logo" style="max-width: 120px; margin-bottom: 1rem;">
+      <h2>Your Emergency QR Code</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">Place this on your vehicle or carry it with you.</p>
+
+      <div id="qrcode" style="display: flex; justify-content: center; margin-bottom: 2rem;"></div>
+
+      <button id="download-btn" class="btn btn-primary">Download QR Code</button>
+      <a href="/dashboard.html" class="btn btn-outline mt-1">Back to Dashboard</a>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/qr.js"></script>
+</body>
+</html>

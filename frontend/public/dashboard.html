@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - QR Medical System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar">
+    <img src="/logo1.png" alt="CarBuddy Logo" class="topbar-logo">
+    <div class="prototype-label">PROTOTYPE</div>
+    <div class="topbar-right"></div>
+  </div>
+
+  <div class="container mt-2">
+    <div class="card text-center">
+      <img src="/logo1.png" alt="CarBuddy Logo" style="max-width: 150px; margin-bottom: 1rem;">
+      <h1 id="welcome-text">Welcome, User</h1>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">Manage your emergency medical information and generate your QR code.</p>
+
+      <a href="/medical-form.html" class="btn btn-primary mb-1">Edit Medical Info</a>
+      <a href="/qr.html" class="btn btn-outline mb-1">Generate QR Code</a>
+      <button class="btn btn-secondary mt-1" id="logout-btn">Logout</button>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
