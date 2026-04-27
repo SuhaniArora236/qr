@@ -16,7 +16,8 @@ app.use(express.static(path.join(__dirname, 'frontend/public')));
 app.use(express.static(path.join(__dirname))); // To serve logo1.png and logo2.png from root
 
 // Database connection
-mongoose.connect('mongodb://127.0.0.1:27017/carbuddy')
+const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/carbuddy';
+mongoose.connect(mongoURI)
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
